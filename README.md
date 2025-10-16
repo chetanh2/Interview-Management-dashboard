@@ -1,10 +1,36 @@
-# Lama Dev School Management Dashboard
+# 🧑‍💻 Interview Management Dashboard
 
-## Getting Started
+A full-featured **Interview Scheduling & Analytics Dashboard** built with **Next.js 14**.  
+It simulates three roles — **Admin**, **TA Member**, and **Panelist** — and provides dashboards with analytics on interviews, attendance, candidate metrics, events, and more.
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+- 🔐 **Authentication & Role Simulation** – Login as `admin`, `ta_member`, or `panelist` and see personalized dashboards.  
+- 📊 **Key Metrics (KPIs)** – Track interviews scheduled, feedback scores, no-shows, offers, etc.  
+- 📅 **Calendar & Events** – Manage interview schedules, panel discussions, and review meetings.  
+- 📈 **Analytics & Charts** – Attendance, gender ratio, income vs expense, and interview trends.  
+- 🔎 **Advanced Filters** – Filter by role, interviewer, and date range.  
+- 🔁 **Session Management** – Secure login/logout simulation with cookie/session handling.  
+
+---
+
+## 🛠️ Getting Started
+
+### 1️⃣ Clone the Repository
 
 ```bash
+git clone https://github.com/your-username/interview-dashboard.git
+cd interview-dashboard
+
+npm install
+# or
+yarn
+# or
+pnpm install
+
+
 npm run dev
 # or
 yarn dev
@@ -12,15 +38,17 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Role          | Username     | Password | Redirects To           |
+| ------------- | ------------ | -------- | ---------------------- |
+| **Admin**     | `admin`      | `1234`   | `/admin` Dashboard     |
+| **TA Member** | `teamMember` | `1234`   | `/ta_member` Dashboard |
+| **Panelist**  | `panel`      | `1234`   | `/panelist` Dashboard  |
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Lama Dev Youtube Channel](https://youtube.com/lamadev) 
-- [Next.js](https://nextjs.org/learn)
+const USERS = [
+  { username: "admin",      password: "1234", role: "admin" },
+  { username: "teamMember", password: "1234", role: "ta_member" },
+  { username: "panel",      password: "1234", role: "panelist" },
+];
