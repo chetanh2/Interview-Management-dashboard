@@ -1,6 +1,7 @@
 // ❌ REMOVE "use client" — this is a SERVER component
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
+import { Suspense } from "react";
 import AdminRolesInner from "./AdminRolesInner";
 
 export default function RoleManagementPage() {
@@ -12,5 +13,7 @@ export default function RoleManagementPage() {
   }
 
   // Only admins make it here
-  return <AdminRolesInner />;
+  return  <Suspense fallback={<div>Loading…</div>}>
+      <AdminRolesInner />
+    </Suspense>
 }

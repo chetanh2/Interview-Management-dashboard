@@ -150,6 +150,7 @@ import {
   loadOverrides,
   saveOverrides,
 } from "@/lib/permissions";
+import { useSearchParams } from "next/navigation";
 
 // Mock users list (in real app, fetch from API)
 type User = { id: number; name: string; role: Role };
@@ -167,7 +168,8 @@ export default function AdminRolesInner() {
   const [permOverrides, setPermOverrides] = useState<
     Partial<Record<Role, Permission[]>>
   >(loadOverrides());
-
+  const searchParams = useSearchParams(); // ✅ now inside Suspense boundary
+  const tab = searchParams.get("tab") ?? "overview";
   // --- Load mock users (seed if missing/empty/bad) ---
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -232,6 +234,7 @@ export default function AdminRolesInner() {
     <main className="p-6 space-y-8">
       <header className="flex items-center justify-between">
         <div>
+          Admin – active tab: {tab}
           <h1 className="text-2xl font-semibold">Role & Permission Management (Mock)</h1>
           <p className="text-gray-600">
             Admin-only interface. Changes are stored in <code>localStorage</code>.
