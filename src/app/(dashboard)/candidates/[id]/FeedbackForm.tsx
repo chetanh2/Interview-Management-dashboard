@@ -38,7 +38,7 @@ export default function FeedbackForm({ candidateId, onSubmitted }: Props) {
       e.improvements = "Please enter at least 10 characters.";
     }
     return e;
-  }, [score, strengths, improvements]);
+  }, [score, scoreNum, strengths, improvements]); 
 
   const isValid = Object.keys(errors).length === 0;
 

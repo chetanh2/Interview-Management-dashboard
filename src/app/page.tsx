@@ -31,10 +31,10 @@ export default function Home() {
             job <span className="text-[#64A172]">tracking</span> app
           </h1>
           <p className="max-w-2xl mb-12 text-[#64748b]">
-            I'm baby wayfarers hoodie next level taiyaki brooklyn cliche blue bottle single-origin
-            coffee chia. Aesthetic post-ironic venmo, quinoa lo-fi tote bag adaptogen everyday carry
-            meggings +1 brunch narwhal.
-          </p>
+          I&apos;m baby wayfarers hoodie next level taiyaki brooklyn cliche blue
+          bottle single-origin coffee chia. Aesthetic post-ironic venmo, quinoa
+          lo-fi tote bag adaptogen everyday carry meggings +1 brunch narwhal.
+        </p>
           <Link href="/register" className="cursor-pointer p-4 mr-4 bg-[#64A172] text-white rounded hover:bg-[#538e5a]">
             Register
           </Link>
