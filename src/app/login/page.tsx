@@ -105,10 +105,14 @@ type FormState = { username: string; password: string; role: Role };
 
 const DEMOS: Array<{ label: string; username: string; password: string }> = [
   // ✅ Valid DummyJSON demo users
-  { label: "kminchelle", username: "kminchelle", password: "0lelplR" },
-  { label: "emilys",     username: "emilys",     password: "emilyspass" },
-  { label: "atuny0",     username: "atuny0",     password: "9uQFF1Lh" },
+  // { label: "kminchelle", username: "kminchelle", password: "0lelplR" },
+  // { label: "emilys",     username: "emilys",     password: "emilyspass" },
+  // { label: "atuny0",     username: "atuny0",     password: "9uQFF1Lh" },
+    { username: "admin",      password: "1234", label: "Admin" },
+  { username: "teamMember", password: "1234", label: "Team Mem" },
+  { username: "panel",      password: "1234", label: "Panellist" },
 ];
+
 
 export default function LoginPage() {
   const router = useRouter();
